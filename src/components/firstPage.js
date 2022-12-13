@@ -6,17 +6,17 @@ const FirstPage = () => {
               <div id="main-page">
                 <svg className="intro" viewBox="0 0 200 60">
                     <text textAnchor="start" x="35" y="30" className="text text-stroke" clipPath="url(#text1)">WELCOME TO</text>
-                    <text textAnchor="start" x="30" y="50" className="text text-stroke" clipPath="url(#text2)">MY PORTFOLIO</text>
+                    <text textAnchor="start" x="25" y="50" className="text text-stroke" clipPath="url(#text2)">MY PORTFOLIO</text>
                     <text textAnchor="start" x="35" y="30" className="text text-stroke text-stroke-2"
                         clipPath="url(#text1)">WELCOME TO</text>
-                    <text textAnchor="start" x="30" y="50" className="text text-stroke text-stroke-2" clipPath="url(#text2)">MY
+                    <text textAnchor="start" x="25" y="50" className="text text-stroke text-stroke-2" clipPath="url(#text2)">MY
                         PORTFOLIO</text>
                     <defs>
                         <clipPath id="text1">
                             <text textAnchor="start" x="35" y="30" className="text">WELCOME TO</text>
                         </clipPath>
                         <clipPath id="text2">
-                            <text textAnchor="start" x="30" y="50" className="text">MY PORTFOLIO</text>
+                            <text textAnchor="start" x="25" y="50" className="text">MY PORTFOLIO</text>
                         </clipPath>
                     </defs>
                 </svg>
@@ -57,6 +57,7 @@ const StyledFirstPage = styled.div`
         transform: scaleX(-1) scaleY(-1);
     }
     svg.intro {
+        font-family: 'Paytone One', sans-serif;
         padding-top: 150px;
         max-width: 800px;
         position: relative;
@@ -68,7 +69,7 @@ const StyledFirstPage = styled.div`
         .text-stroke {
             fill: none;
             stroke: #000000;
-            stroke-width: 2.8px;
+            stroke-width: 10px;
             stroke-dashoffset: -900;
             stroke-dasharray: 900;
             stroke-linecap: butt;
