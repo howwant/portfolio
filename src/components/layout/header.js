@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import styled from 'styled-components';
-const Header = () => {
 
-    // 스크롤 배경색 추가
+const Header = () => {
+    // 스크롤시 배경색 추가
     useEffect(() => {
         const menu = document.querySelector('#header');
         const menuHeight = document.querySelector('#header').getBoundingClientRect().height;
