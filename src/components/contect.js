@@ -4,8 +4,8 @@ import { MdOutlineAddIcCall, MdOutlineMailOutline } from 'react-icons/md';
 const Contect = () => {
     return(
         <StyledContect>
-            <div id="Contect" class="container">
-                <h3 class="title">
+            <div id="Contect" className="container">
+                <h3 className="title">
                     <p>CONTECT</p>
                 </h3>
                 <ul>
@@ -23,19 +23,19 @@ const Contect = () => {
                     </li>
                     <li>
                         <a target="_blank" href="https://github.com/howwant" rel="noreferrer">
-                            <img src="/img/github.png" alt="github" class="paddingBottom" />
+                            <img src="/img/github.png" alt="github" className="paddingBottom" />
                             <span>github</span>
                         </a>
                     </li>
                     <li>
                         <a target="_blank" href="https://www.instagram.com/how_want_/" rel="noreferrer">
-                            <img src="/img/Instagram.png" alt="Instagram" class="paddingBottom" />
+                            <img src="/img/Instagram.png" alt="Instagram" className="paddingBottom" />
                             <span>Instagram</span>
                         </a>
                     </li>
                     <li>
                         <a target="_blank" href="https://velog.io/@corn" rel="noreferrer" >
-                            <img src="img/velog.png" alt="velog" class="paddingBottom" />
+                            <img src="img/velog.png" alt="velog" className="paddingBottom" />
                             <span>velog</span>
                         </a>
                     </li>

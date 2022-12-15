@@ -1,6 +1,21 @@
 import styled from "styled-components"
 import { MdArrowForwardIos } from 'react-icons/md';
 
+function Web(name, link, imgUrl, ...detail) {
+	this.name = name;
+	this.link = link;
+	this.imgUrl = imgUrl; 
+	this.detail = [...detail];
+
+}
+
+const WebList = [ 
+	new Web('인천연세병원','https://naver.com','/img/icy.png','인천연세병원 리뉴얼','sass','Jquery'),
+	new Web('THEFACESHOP','https://naver.com','/img/theface.png','더페이스샵 리뉴얼') ,
+	new Web('TalesRunner','https://naver.com','/img/tales.png','테일즈런너 리뉴얼'),
+];
+
+
 const Projects = () => {
     return(
         <StyledProjects>
@@ -10,44 +25,28 @@ const Projects = () => {
                 </h3>
                 <h4 className="mini-title">Front-end</h4>
                 <ul className="front-end">
-                    <li>
-                        <div>
-                            <h6>인천연세병원</h6>
-                            <p>퍼블리싱 100%<br />
-                                인천연세병원 리뉴얼<br />
-                                제작기간 2일</p>
-                            <span className="shortcut">바로가기<MdArrowForwardIos/></span>
-                            <a href="#none" target="_blank" rel="noreferrer"></a>
-                            <div className="bg_g"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <h6>THEFACESHOP</h6>
-                            <p>퍼블리싱 100%<br />
-                                더페이스샵 리뉴얼<br />
-                                제작기간 2일</p>
-                            <span className="shortcut">바로가기<MdArrowForwardIos/></span>
-                            <a href="#none" target="_blank" rel="noreferrer"></a>
-                            <div className="bg_g"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <h6>TalesRunner</h6>
-                            <p>퍼블리싱 100%<br />
-                                테일즈런너 리뉴얼<br />
-                                제작기간 2일</p>
-                            <span className="shortcut">바로가기<MdArrowForwardIos/></span>
-                            <a href="#none" target="_blank" rel="noreferrer"></a>
-                            <div className="bg_g"></div>
-                        </div>
-                    </li>
+					{
+						WebList.map((Web, index)=>
+							<li style={{backgroundImage: `url(${Web.imgUrl})`}} key={index}>
+								<div>
+									<h6>{Web.name}</h6>
+									<div className="comment">
+										{(Web.detail).map((coment,index)=>
+											<p key={index}>{coment}</p>
+										)}
+									</div>
+									<span className="shortcut">바로가기<MdArrowForwardIos/></span>
+									<a href={Web.link} target="_blank" rel="noreferrer"></a>
+									<div className="bg_g"></div>
+								</div>
+							</li>
+						)
+					}
                 </ul>
                 <h4 className="mini-title">Desgin</h4>
                 <ul>
                     <li>
-                        <p></p>
+                        <p>준비중</p>
                     </li>
                 </ul>
             </div>
@@ -86,7 +85,7 @@ const StyledProjects = styled.div`
 				z-index: 2;
 				color: #fff;
 			}
-			p {
+			.comment {
 				font-size: 18px;
 				line-height: 22px;
 				position: absolute;
@@ -133,7 +132,7 @@ const StyledProjects = styled.div`
 				z-index: 4;
 			}
 			&:hover {
-				p {
+				.comment {
 				top: 132px;
 				}
 				div.bg_g {
@@ -149,18 +148,8 @@ const StyledProjects = styled.div`
 			}
 		}
 	}
-	// 수정 필요
 	.front-end {
 		padding-bottom: 50px;
-		li:first-child {
-			background: url(/img/icy.png);
-		}
-		li:nth-child(2) {
-			background: url(/img/theface.png);
-		}
-		li:nth-child(3) {
-			background: url(/img/tales.png);
-		}
 	}
 
 `;
