@@ -18,3 +18,50 @@ a {
   color: #000;
   text-decoration: none;
 }
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+.title {
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
+  font-size: 34px;
+}
+
+.title p {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.title p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: lightpink;
+  top: -5px;
+  left: -5px;
+  z-index: -1;
+}
+
+.mini-title {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+.mini-title::after,
+.mini-title::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 2px;
+  background-color: #fff;
+  vertical-align: middle;
+  margin: 0 10px;
+}
