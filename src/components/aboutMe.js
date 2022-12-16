@@ -185,6 +185,7 @@ const StyledAboutMe = styled.div`
     .img-box {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         .img {
             border-radius: 50%;
             overflow: hidden;
@@ -267,6 +268,30 @@ const StyledAboutMe = styled.div`
                 transform: scale(1.1);
             }
         }
+    }
+    // 반응형
+    @media screen and (max-width: 1300px) {
+        #AboutMe {
+            padding: 70px 20px;
+        }
+    }
+    @media screen and (max-width: 975px) {
+        #AboutMe {
+            padding: 70px 20px;
+        }
+        .img-box {
+            .img {
+            margin: 40px 0;
+            width: 200px;
+            height: 200px;
+           }
+           .intro {
+            text-align: center;
+            h4 {
+                margin: 0 auto 10px;
+            }
+           }
+        } 
     }
 `;
 export default AboutMe;

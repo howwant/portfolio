@@ -154,6 +154,11 @@ const StyledProjects = styled.div`
 	.front-end {
 		padding-bottom: 50px;
 	}
-
+    // 반응형
+    @media screen and (max-width: 1300px) {
+        #Projects {
+            padding: 70px 20px;
+        }
+    }
 `;
 export default Projects;

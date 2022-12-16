@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import styled from 'styled-components';
 import ThemeContext from '../../api/themeContext';
+import { Pc, Mobile } from '../../api/media';
 
 const Header = () => {
     // 스크롤시 배경색 추가
@@ -25,11 +26,13 @@ const Header = () => {
                     <h1>KHW's portfolio</h1>
                 </li>
                 <li id="menuWarp">
-                    <ul id="menu">
-                        <li><a href="#AboutMe">About me</a></li>
-                        <li><a href="#Projects">Projects</a></li>
-                        <li><a href="#Contect">Contect</a></li>
-                    </ul>
+                    <Pc>
+                        <ul id="menu">
+                            <li><a href="#AboutMe">About me</a></li>
+                            <li><a href="#Projects">Projects</a></li>
+                            <li><a href="#Contect">Contect</a></li>
+                        </ul>
+                    </Pc>
                     <p id="darkMode">
                     <ThemeContext.Consumer>
                         { value =>  value.isDarkMode?
@@ -38,6 +41,19 @@ const Header = () => {
                         } 
                     </ThemeContext.Consumer>
                     </p>
+                    <Mobile>
+                        <input type="checkbox" name='moblieMenu_check'id='moblieMenu_check'/>
+                        <label htmlFor="moblieMenu_check" className='moblieMenu_check'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <ul className="moblieMenu">
+                            <li><a href="#AboutMe">About me</a></li>
+                            <li><a href="#Projects">Projects</a></li>
+                            <li><a href="#Contect">Contect</a></li> 
+                        </ul>
+                    </Mobile>
                 </li>
             </ul>
             </header>
@@ -139,6 +155,85 @@ const StyledHeader = styled.div`
     .bgcolor {
         background: #ffffff73;
         backdrop-filter: blur(10px);
+    }
+    // 반응형
+    @media screen and (max-width: 1300px) {
+        header > ul {
+            padding: 0 20px;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        #menuWarp {
+            min-width: auto;
+        }
+        #darkMode {
+            width: 40px;
+        }
+        #moblieMenu_check {
+            display: none;
+        }
+        #moblieMenu_check:checked + .moblieMenu_check {
+            span:nth-child(1){
+                transform:  rotate(-45deg) translate(-8px,4px);
+            }
+            span:nth-child(2){
+                display: none;
+            }
+            span:nth-child(3){
+                transform: rotate(45deg) translate(-8px,-4px);
+            }
+        }
+        .moblieMenu_check {
+            position: relative;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 40px;
+            height: 21px;
+            span {
+                width: 20px;
+                height: 3px;
+                background: #000;
+                display: block;
+                transition: 0.3s;
+            }
+        }
+        .moblieMenu {
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            right: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding-top: 0;
+            height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            li {
+                a {
+                    padding: 10px 0;
+                    display: inline-block;
+                    border-top: 1px solid #eee;
+                    width: 100%;
+                    transition: 0.3s;
+                  }
+                  &:hover a {
+                    background: #eee;
+                  }
+            }
+            
+        }
+        #moblieMenu_check:checked + .moblieMenu_check + .moblieMenu {
+            height: auto;
+            padding-top: 47px;
+        }
     }
 `;
 
