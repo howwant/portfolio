@@ -1,0 +1,77 @@
+// 공통 클래스
+.title {
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    font-size: 34px;
+    p {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: lightpink;
+            top: -5px;
+            left: -5px;
+            z-index: -1;
+          }
+          
+      }
+      
+  }
+  
+  .mini-title {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0;
+    &:after,
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 70px;
+      height: 2px;
+      background-color: #fff;
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+  }
+
+  // darkmode
+  #root.darkmode {
+    color: #fff;
+    a {
+        color: #fff;
+    }
+    .bgcolor {
+        background: #22222273;
+    }
+    #main-page {
+        background-color:#444;
+        background-image: url(../../public/img/background-2.png);
+        .bg-image {
+            background-image: url(../../public/img/background-2.png);
+        }
+    }
+    .icon-box {
+        color: #fff;
+    }
+    #AboutMe,.styledfooter {
+        background-color: #333;
+    }
+    #Projects, #Contect {
+        background-color:#444;
+    }
+    #Projects .mini-title::after, #Projects .mini-title::before {
+        background-color: #666;
+    }
+    .title p:before {
+        background-color: #2ba0ff;
+    }
+    #Contect ul li:hover a{
+        background-color: #333;
+    }
+  }

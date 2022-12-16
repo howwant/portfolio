@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import styled from 'styled-components';
+import ThemeContext from '../../api/themeContext';
 
 const Header = () => {
     // 스크롤시 배경색 추가
@@ -25,13 +26,17 @@ const Header = () => {
                 </li>
                 <li id="menuWarp">
                     <ul id="menu">
-                        <li><a href="#none">About me</a></li>
-                        <li><a href="#none">Projects</a></li>
-                        <li><a href="#none">Contect</a></li>
+                        <li><a href="#AboutMe">About me</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Contect">Contect</a></li>
                     </ul>
                     <p id="darkMode">
-                        <MdDarkMode className='darkmode'/>
-                        <MdLightMode className='lightmode'/>
+                    <ThemeContext.Consumer>
+                        { value =>  value.isDarkMode?
+                        <MdDarkMode className='darkmode' onClick={value.toggleDarkMode}/> :
+                        <MdLightMode className='lightmode' onClick={value.toggleDarkMode}/>
+                        } 
+                    </ThemeContext.Consumer>
                     </p>
                 </li>
             </ul>
@@ -55,7 +60,7 @@ const StyledHeader = styled.div`
         padding-bottom: 10px;
         transition: 0.3s;
     }
-    header ul {
+    header > ul {
         max-width: 1300px;
         margin: 0 auto;
     }
@@ -66,6 +71,7 @@ const StyledHeader = styled.div`
         float: right;
         display: flex;
         min-width: 350px;
+        margin-top: 3px;
         &::after {
         content: '';
         display: inline-block;
@@ -74,7 +80,7 @@ const StyledHeader = styled.div`
     } 
     #menu {
         display: flex;
-        width: 90%;
+        width: 85%;
         li {
             width: 33.333%;
             position: relative;
@@ -112,11 +118,14 @@ const StyledHeader = styled.div`
         }
     }
     #darkMode {
-        width: 10%;
+        width: 15%;
         text-align: center;
         transition: 0.3s;
         cursor: pointer;
-        padding-top: 3px;
+        font-size: 22px;
+        svg {
+            width: 100%;
+        }
     }
     .darkmode, .lightmode {
         transition: 0.3s;
@@ -128,7 +137,8 @@ const StyledHeader = styled.div`
         color: #ff0000;
     }
     .bgcolor {
-        background: #fff;
+        background: #ffffff73;
+        backdrop-filter: blur(10px);
     }
 `;
 

@@ -138,7 +138,7 @@ const AboutMe = () => {
 const StyledAboutMe = styled.div`
     #AboutMe {
         background-color: #c9e6ff;
-        padding: 50px 17%;
+        padding: 70px 17%;
     }
     .img-box {
         display: flex;

@@ -41,10 +41,6 @@ const StyledFirstPage = styled.div`
             position: relative;
             z-index: 1;
         }
-        div {
-        padding-top: 300px;
-        font-size: 70px;
-    }
     }
     .bg-image {
         background-image: url(/img/background.png);

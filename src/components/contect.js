@@ -47,7 +47,7 @@ const Contect = () => {
 const StyledContect = styled.div`
     #Contect {
         background-color: aliceblue;
-        padding: 50px 17%;
+        padding: 70px 17%;
         ul {
             display: flex;
             align-items: stretch;

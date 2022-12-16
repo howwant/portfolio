@@ -5,17 +5,20 @@ import Contect from "./components/contect";
 import FirstPage from "./components/firstPage";
 import Layout from "./components/layout/layout";
 import Projects from "./components/projects";
+import { ThemeProvider} from "./api/themeProvider";
 
 function App() {
   return (  
     <React.Fragment>
-      <Reset />
+    <ThemeProvider>
+      <Reset/>
       <Layout>
         <FirstPage/>
         <AboutMe/>
         <Projects/>
         <Contect/>
       </Layout>
+      </ThemeProvider>
     </React.Fragment>
   );
 }

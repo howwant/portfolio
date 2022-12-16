@@ -56,7 +56,7 @@ const Projects = () => {
 const StyledProjects = styled.div`
 	#Projects {
 		background-color: aliceblue;
-		padding: 50px 17%;
+		padding: 70px 17%;
 		.mini-title::after,
 		.mini-title::before {
 			background-color: #cce7fd;
