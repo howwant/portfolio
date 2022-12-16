@@ -4,42 +4,44 @@ import { MdOutlineAddIcCall, MdOutlineMailOutline } from 'react-icons/md';
 const Contect = () => {
     return(
         <StyledContect>
-            <div id="Contect" className="container">
-                <h3 className="title">
-                    <p>CONTECT</p>
-                </h3>
-                <ul>
-                    <li>
-                        <a href="tel:01047037341">
-                            <MdOutlineAddIcCall className="icon"/>
-                            <span>010-4703-7341</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="mailto:corn1128@naver.com" rel="noreferrer">
-                            <MdOutlineMailOutline className="icon"/>
-                            <span>corn1128@naver.com</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://github.com/howwant" rel="noreferrer">
-                            <img src="/img/github.png" alt="github" className="paddingBottom" />
-                            <span>github</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.instagram.com/how_want_/" rel="noreferrer">
-                            <img src="/img/Instagram.png" alt="Instagram" className="paddingBottom" />
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://velog.io/@corn" rel="noreferrer" >
-                            <img src="img/velog.png" alt="velog" className="paddingBottom" />
-                            <span>velog</span>
-                        </a>
-                    </li>
-                </ul>
+            <div id="Contect">
+                <div  className="container">
+                    <h3 className="title">
+                        <p>CONTECT</p>
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="tel:01047037341">
+                                <MdOutlineAddIcCall className="icon"/>
+                                <span>010-4703-7341</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="mailto:corn1128@naver.com" rel="noreferrer">
+                                <MdOutlineMailOutline className="icon"/>
+                                <span>corn1128@naver.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/howwant" rel="noreferrer">
+                                <img src="/img/github.png" alt="github" className="paddingBottom" />
+                                <span>github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/how_want_/" rel="noreferrer">
+                                <img src="/img/Instagram.png" alt="Instagram" className="paddingBottom" />
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://velog.io/@corn" rel="noreferrer" >
+                                <img src="img/velog.png" alt="velog" className="paddingBottom" />
+                                <span>velog</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
           </div>  
         </StyledContect>
     )
@@ -47,7 +49,7 @@ const Contect = () => {
 const StyledContect = styled.div`
     #Contect {
         background-color: aliceblue;
-        padding: 70px 17%;
+        padding: 70px 10px;
         ul {
             display: flex;
             align-items: stretch;

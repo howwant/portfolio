@@ -24,22 +24,26 @@
       
   }
   
-  .mini-title {
+.mini-title {
     text-align: center;
     font-size: 24px;
     padding: 20px 0;
     &:after,
     &:before {
-      content: "";
-      display: inline-block;
-      width: 70px;
-      height: 2px;
-      background-color: #fff;
-      vertical-align: middle;
-      margin: 0 10px;
+        content: "";
+        display: inline-block;
+        width: 70px;
+        height: 2px;
+        background-color: #fff;
+        vertical-align: middle;
+        margin: 0 10px;
     }
-  }
+}
 
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
   // darkmode
   #root.darkmode {
     color: #fff;
@@ -49,7 +53,7 @@
     .bgcolor {
         background: #22222273;
     }
-    #main-page {
+    #first-page {
         background-color:#444;
         background-image: url(../../public/img/background-2.png);
         .bg-image {
@@ -74,4 +78,11 @@
     #Contect ul li:hover a{
         background-color: #333;
     }
+    .web-skills li img, .desgin-skills li img {
+        filter: drop-shadow(0 0 3px #fff);
+    }
+    .underline:before {// aboutme
+        background: #0E548E;
+    }
   }
+  

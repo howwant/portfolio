@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import styled from "styled-components"
 import { MdArrowForwardIos } from 'react-icons/md';
 
@@ -20,35 +21,37 @@ const Projects = () => {
     return(
         <StyledProjects>
             <div id="Projects">
-                <h3 className="title">
-                    <p>PROJECTS</p>
-                </h3>
-                <h4 className="mini-title">Front-end</h4>
-                <ul className="front-end">
-					{
-						WebList.map((Web, index)=>
-							<li style={{backgroundImage: `url(${Web.imgUrl})`}} key={index}>
-								<div>
-									<h6>{Web.name}</h6>
-									<div className="comment">
-										{(Web.detail).map((coment,index)=>
-											<p key={index}>{coment}</p>
-										)}
+				<div className="container">
+					<h3 className="title">
+						<p>PROJECTS</p>
+					</h3>
+					<h4 className="mini-title">Front-end</h4>
+					<ul className="front-end">
+						{
+							WebList.map((Web, index)=>
+								<li style={{backgroundImage: `url(${Web.imgUrl})`}} key={index}>
+									<div>
+										<h6>{Web.name}</h6>
+										<div className="comment">
+											{(Web.detail).map((coment,index)=>
+												<p key={index}>{coment}</p>
+											)}
+										</div>
+										<span className="shortcut">바로가기<MdArrowForwardIos/></span>
+										<a href={Web.link} target="_blank" rel="noreferrer"></a>
+										<div className="bg_g"></div>
 									</div>
-									<span className="shortcut">바로가기<MdArrowForwardIos/></span>
-									<a href={Web.link} target="_blank" rel="noreferrer"></a>
-									<div className="bg_g"></div>
-								</div>
-							</li>
-						)
-					}
-                </ul>
-                <h4 className="mini-title">Desgin</h4>
-                <ul>
-                    <li>
-                        <p>준비중</p>
-                    </li>
-                </ul>
+								</li>
+							)
+						}
+					</ul>
+					<h4 className="mini-title">Desgin</h4>
+					<ul>
+						<li>
+							<p>준비중</p>
+						</li>
+					</ul>
+				</div>
             </div>
         </StyledProjects>
     )
@@ -56,7 +59,7 @@ const Projects = () => {
 const StyledProjects = styled.div`
 	#Projects {
 		background-color: aliceblue;
-		padding: 70px 17%;
+		padding: 70px 10px;
 		.mini-title::after,
 		.mini-title::before {
 			background-color: #cce7fd;

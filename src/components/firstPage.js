@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const FirstPage = () => {
     return(
         <StyledFirstPage>
-              <div id="main-page">
+              <div id="first-page">
                 <svg className="intro" viewBox="0 0 200 60">
                     <text textAnchor="start" x="35" y="30" className="text text-stroke" clipPath="url(#text1)">WELCOME TO</text>
                     <text textAnchor="start" x="25" y="50" className="text text-stroke" clipPath="url(#text2)">MY PORTFOLIO</text>
@@ -27,7 +27,7 @@ const FirstPage = () => {
     )
 }
 const StyledFirstPage = styled.div`
-    #main-page {
+    #first-page {
         height: 750px;
         background-image: url(/img/background.png);
         background-repeat: no-repeat;
@@ -36,7 +36,6 @@ const StyledFirstPage = styled.div`
         position: relative;
         P {
             font-size: 20px;
-            -webkit-animation: fadeIn 2.5s ease-in-out forwards;
             animation: fadeIn 2.5s ease-in-out forwards;
             position: relative;
             z-index: 1;
@@ -70,7 +69,6 @@ const StyledFirstPage = styled.div`
             stroke-dasharray: 900;
             stroke-linecap: butt;
             stroke-linejoin: round;
-            -webkit-animation: dash 2.5s ease-in-out forwards;
             animation: dash 2.5s ease-in-out forwards;
             &:nth-child(2) {
                 -webkit-animation-delay: 0.3s;
@@ -79,7 +77,6 @@ const StyledFirstPage = styled.div`
         }
         .text-stroke-2 {
             stroke: #2ba0ff;
-            -webkit-animation-delay: 1.2s;
             animation-delay: 1.2s;
         }
     }
