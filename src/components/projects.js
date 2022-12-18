@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import styled from "styled-components"
 import { MdArrowForwardIos } from 'react-icons/md';
+import { db } from '../firebase';
+
 
 function Web(name, link, imgUrl, ...detail) {
 	this.name = name;
@@ -18,6 +20,11 @@ const WebList = [
 
 
 const Projects = () => {
+	db.collection('web').get().then((결과)=>{
+		결과.forEach((doc)=>{
+		  console.log(doc.data())
+		})
+	})
     return(
         <StyledProjects>
             <div id="Projects">
