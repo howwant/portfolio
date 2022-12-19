@@ -1,30 +1,56 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import styled from "styled-components"
 import { MdArrowForwardIos } from 'react-icons/md';
-import { db } from '../firebase';
+import React, { useState, useEffect } from 'react'
+import { db, storageRef } from '../firebase';
 
 
-function Web(name, link, imgUrl, ...detail) {
-	this.name = name;
-	this.link = link;
-	this.imgUrl = imgUrl; 
-	this.detail = [...detail];
+const Read = () => {
+	const [ web, setWeb ] = useState([]);
 
+	useEffect(() => {
+		const getwebs = async () => {
+			db.collection('web').get().then((result)=>{
+				result.forEach((doc)=>{
+					storageRef.child(doc.data().imgUrl).getDownloadURL()
+					.then((url)=>{
+						return url;
+					}).then((url)=>{
+						const webObject = {
+							...doc.data(),
+							id: doc.id,
+							imgUrl: url
+						}
+						setWeb((prev) => [webObject, ...prev])
+					})
+				})
+		})
+    };
+    getwebs()
+  }, [])
+  
+
+  return (
+	web && web.map((Web, index)=>
+			<li style={{backgroundImage: `url('${Web.imgUrl}')`}} key={index}>
+				<div>
+					<h6>{Web.name}</h6>
+					<div className="comment">
+						{(Web.detail).map((coment,index)=>
+							<p key={index}>{coment}</p>
+						)}
+					</div>
+					<span className="shortcut">바로가기<MdArrowForwardIos/></span>
+					<a href={Web.link} target="_blank" rel="noreferrer"></a>
+					<div className="bg_g"></div>
+				</div>
+			</li>
+		)
+  )
 }
-
-const WebList = [ 
-	new Web('인천연세병원','https://naver.com','/img/icy.png','인천연세병원 리뉴얼','sass','Jquery'),
-	new Web('THEFACESHOP','https://naver.com','/img/theface.png','더페이스샵 리뉴얼') ,
-	new Web('TalesRunner','https://naver.com','/img/tales.png','테일즈런너 리뉴얼'),
-];
 
 
 const Projects = () => {
-	db.collection('web').get().then((결과)=>{
-		결과.forEach((doc)=>{
-		  console.log(doc.data())
-		})
-	})
     return(
         <StyledProjects>
             <div id="Projects">
@@ -34,23 +60,7 @@ const Projects = () => {
 					</h3>
 					<h4 className="mini-title">Front-end</h4>
 					<ul className="front-end">
-						{
-							WebList.map((Web, index)=>
-								<li style={{backgroundImage: `url(${Web.imgUrl})`}} key={index}>
-									<div>
-										<h6>{Web.name}</h6>
-										<div className="comment">
-											{(Web.detail).map((coment,index)=>
-												<p key={index}>{coment}</p>
-											)}
-										</div>
-										<span className="shortcut">바로가기<MdArrowForwardIos/></span>
-										<a href={Web.link} target="_blank" rel="noreferrer"></a>
-										<div className="bg_g"></div>
-									</div>
-								</li>
-							)
-						}
+						<Read/>
 					</ul>
 					<h4 className="mini-title">Desgin</h4>
 					<ul>
