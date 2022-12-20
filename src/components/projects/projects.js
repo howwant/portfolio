@@ -13,6 +13,9 @@ const Projects = () => {
 						<p>PROJECTS</p>
 					</h3>
 					<h4 className="mini-title">Front-end</h4>
+						<a className="github" target="_blank" href="https://github.com/howwant" rel="noreferrer">
+							<img src="/img/github.png" alt="github" className="paddingBottom" />
+						</a>
 						<WebProjects/>
 					<h4 className="mini-title">Desgin</h4>
 						<DesginProjects/>
@@ -30,8 +33,10 @@ const StyledProjects = styled.div`
 			background-color: #cce7fd;
 		}
 	}
-	.front-end {
-		padding-bottom: 50px;
+	.github {
+		display: block;
+		margin: 0 auto;
+		width: 50px;
 	}
     // 반응형
     @media screen and (max-width: 1300px) {

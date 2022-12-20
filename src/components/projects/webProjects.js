@@ -48,6 +48,16 @@ const WebProjects = () => {
                     </li>
                 )
             }
+            <li style={{backgroundImage: `url(/img/portfolio.png)`}}>
+                <div>
+                    <h6>portfolio</h6>
+                    <div className="comment">
+                        <p>react, sass, firebase</p>
+                        <p>scroll page</p>
+                    </div>
+                    <div className="bg_g"></div>
+                </div>
+            </li>
         </ul>
     </StyledwebProjects>
   )

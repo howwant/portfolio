@@ -84,12 +84,14 @@ const StyledDesgin = styled.div`
     left: 0;
     right: 0;
     text-align: center;
+    overflow: scroll;
     div {
         max-width: 600px;
-        margin: 200px auto 0;
+        margin: 200px auto;
         position: relative;
         border-radius: 10px;
         overflow: hidden;
+
         img {
         display: block;
         }
