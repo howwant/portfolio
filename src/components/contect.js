@@ -53,11 +53,13 @@ const StyledContect = styled.div`
         ul {
             display: flex;
             align-items: stretch;
-            justify-content: space-between;
-            padding: 50px 0;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 50px;
             li {
                 width: 20%;
                 text-align: center;
+                min-width: 180px;
                 a {
                     padding-top: 10px;
                     transition: 0.3s;
@@ -83,6 +85,27 @@ const StyledContect = styled.div`
             }
         }
     }
+    //반응형
+  @media screen and (max-width: 1300px) {
+    #Contect {
+        padding: 50px 20px;
+        ul {
+            padding-top: 20px;
+        }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    #Contect {
+        padding: 20px;
+        ul li {
+        width: 50%;
+        min-width: auto;
+        span {
+        font-size: 13px;
+    }
+    }
+    } 
+  }
 `;
 
 

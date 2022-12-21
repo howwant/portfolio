@@ -85,4 +85,14 @@
         background: #0E548E;
     }
   }
+  // 반응형
+  @media screen and (max-width: 480px) {
+    .title {
+        font-size: 27px;
+    }
+    .mini-title {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+  }
   

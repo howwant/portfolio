@@ -235,6 +235,11 @@ const StyledHeader = styled.div`
             padding-top: 47px;
         }
     }
+    @media screen and (max-width: 375px) {
+        h1 {
+            font-size: 26px;
+        }
+    }
 `;
 
 export default Header

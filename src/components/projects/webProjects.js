@@ -50,10 +50,11 @@ const WebProjects = () => {
             }
             <li style={{backgroundImage: `url(/img/portfolio.png)`}}>
                 <div>
-                    <h6>portfolio</h6>
+                    <h6>Portfolio</h6>
                     <div className="comment">
                         <p>react, sass, firebase</p>
                         <p>scroll page</p>
+                        <p>반응형</p>
                     </div>
                     <div className="bg_g"></div>
                 </div>
@@ -73,12 +74,13 @@ const StyledwebProjects = styled.div`
         width: 32%;
         margin-top: 20px;
         background-color: #ccc;
-        min-height: 345px;
+        height: 345px;
         position: relative;
         overflow: hidden;
         color: #fff;
         box-shadow: 5px 6px 6px #ccc;
         background-size: cover;
+        background-position-x: center;
         h6 {
             font-size: 23px;
             margin: 91px 0 22px;
@@ -152,5 +154,86 @@ const StyledwebProjects = styled.div`
 	.front-end {
 		padding-bottom: 50px;
 	}
+    // 반응형
+    @media screen and (max-width: 1024px) {
+        .front-end li {
+            max-height: 213px;
+            h6 {
+                margin-top: 35px;
+            }
+            &:hover {
+                .comment {
+                    top: 77px;
+                }
+                .shortcut {
+                    margin: 74px 15px 0 0;
+                }
+            } 
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .front-end {
+            padding-bottom: 20px;
+            li {
+            max-height: 158px;
+            > div {
+                text-align: center;
+            }
+            .comment {
+                position: relative;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+            h6 {
+                margin: 28px 0 0;
+                padding: 0;
+            }
+            .shortcut {
+                display: none;
+            }
+            &:hover {
+                .comment {
+                opacity: 1;
+                top: 10px;
+                }
+                div.bg_g {
+                    transform: initial;
+                }
+            }
+        }
+        } 
+    }
+    @media screen and (max-width: 480px) {
+        .github {
+            width: 10%;
+        }
+        .front-end li {
+            max-height: 130px;
+            width: 49%;
+            h6 {
+                margin-top: 7px;
+                font-size: 20px;
+            }
+            .comment {
+                font-size: 16px;
+            }
+            &:hover .comment {
+                top: 3px;
+            }
+        }
+    }
+    @media screen and (max-width: 375px) {
+        .front-end li {
+            max-height: 109px;
+            h6 {
+                margin-top: 28px;
+                font-size: 16px;
+            }
+            .comment {
+                display: none;
+            }
+        }
+    }
 `;
 export default WebProjects;

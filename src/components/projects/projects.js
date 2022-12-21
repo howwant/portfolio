@@ -44,5 +44,14 @@ const StyledProjects = styled.div`
             padding: 70px 20px;
         }
     }
+	@media screen and (max-width: 1024px) {}
+	@media screen and (max-width: 768px) {}
+	@media screen and (max-width: 480px) {
+		#Projects {
+            padding: 20px;
+        }
+	}
+	@media screen and (max-width: 375px) {}
+
 `;
 export default Projects;

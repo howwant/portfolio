@@ -276,9 +276,6 @@ const StyledAboutMe = styled.div`
         }
     }
     @media screen and (max-width: 975px) {
-        #AboutMe {
-            padding: 70px 20px;
-        }
         .img-box {
             .img {
             margin: 40px 0;
@@ -287,11 +284,71 @@ const StyledAboutMe = styled.div`
            }
            .intro {
             text-align: center;
+            padding-left: 0;
+            width: 100%;
             h4 {
                 margin: 0 auto 10px;
             }
+            p {
+                margin:  0 auto;
+            }
            }
         } 
+        .icon-box li .icon {
+            margin-right: 5px;
+        }
+    }
+    @media screen and (max-width: 786px) {
+        .icon-box {
+            margin-top: 20px;
+            li {
+            text-align: center;
+            .icon {
+            float: none;
+            margin-right: 0;
+        }
+        } 
+        } 
+    }
+    @media screen and (max-width: 480px) {
+        #AboutMe {
+            padding: 20px;
+        }
+        .img-box {
+            .img {
+            margin: 20px 0;
+            width: 150px;
+            height: 150px;
+        }
+        .intro {
+            h4 {
+            font-size: 22px;
+            }
+            p {
+                font-size: 16px;
+            }
+            }
+        } 
+        .icon-box li {
+            width: 50%;
+            .icon {
+            font-size: 28px;
+        }
+        h5 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 15px;
+        }
+        } 
+        .mini-title {
+            padding: 0;
+        }
+        .skills li:first-child {
+            padding-bottom: 0;
+        }
+    }
+    @media screen and (max-width: 375px) {
     }
 `;
 export default AboutMe;

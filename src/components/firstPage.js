@@ -20,7 +20,7 @@ const FirstPage = () => {
                         </clipPath>
                     </defs>
                 </svg>
-                <p>프론트엔드 개발자 강화원입니다. 발전하는 웹서비스 개발을 추구합니다.</p>
+                <p>프론트엔드 개발자 강화원입니다.<br/> 발전하는 웹서비스 개발을 추구합니다.</p>
                 <div className="bg-image"></div>
             </div>
         </StyledFirstPage>
@@ -39,6 +39,9 @@ const StyledFirstPage = styled.div`
             animation: fadeIn 2.5s ease-in-out forwards;
             position: relative;
             z-index: 1;
+            br {
+                display: none;
+            }
         }
     }
     .bg-image {
@@ -115,6 +118,55 @@ const StyledFirstPage = styled.div`
 			}
 		}
 	}
+    @media screen and (max-width: 1024px) {
+        #first-page {
+        height: 550px;
+        }
+        svg.intro {
+        padding-top: 120px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        #first-page {
+            height: 400px;
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                background: #ffffffba;
+                top: 81px;
+                height: 241px;
+                z-index: 1;
+            }
+            }
+        svg.intro {
+            padding-top: 48px;
+            }
+    }
+    @media screen and (max-width: 480px) {
+        #first-page {
+            height: 275px;
+            &::before{
+                top: 60px;
+                height: 190px;
+            }
+            P{
+                font-size: 17px;
+                br {
+                    display: block;
+                }
+            } 
+        } 
+    }
+    @media screen and (max-width: 375px) {
+        #first-page {
+            height: 230px;
+            &::before{
+                height: 150px;
+            }
+        } 
+    }
 `
 
 export default FirstPage;
