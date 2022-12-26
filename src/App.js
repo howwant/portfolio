@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Reset } from 'styled-reset';
 import AboutMe from "./components/aboutMe";
-import Contect from "./components/contect";
+import Contact from "./components/contact";
 import FirstPage from "./components/firstPage";
 import Layout from "./components/layout/layout";
 import Projects from "./components/projects/projects";
@@ -16,7 +16,7 @@ function App() {
         <FirstPage/>
         <AboutMe/>
         <Projects/>
-        <Contect/>
+        <Contact/>
       </Layout>
       </ThemeProvider>
     </React.Fragment>

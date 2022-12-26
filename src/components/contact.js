@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import { MdOutlineAddIcCall, MdOutlineMailOutline } from 'react-icons/md';
 
-const Contect = () => {
+const Contact = () => {
     return(
-        <StyledContect>
-            <div id="Contect">
+        <StyledContact>
+            <div id="Contact">
                 <div  className="container">
                     <h3 className="title">
-                        <p>CONTECT</p>
+                        <p>CONTACT</p>
                     </h3>
                     <ul>
                         <li>
@@ -43,11 +43,11 @@ const Contect = () => {
                     </ul>
                 </div>
           </div>  
-        </StyledContect>
+        </StyledContact>
     )
 }
-const StyledContect = styled.div`
-    #Contect {
+const StyledContact = styled.div`
+    #Contact {
         background-color: aliceblue;
         padding: 70px 10px;
         ul {
@@ -87,7 +87,7 @@ const StyledContect = styled.div`
     }
     //반응형
   @media screen and (max-width: 1300px) {
-    #Contect {
+    #Contact {
         padding: 50px 20px;
         ul {
             padding-top: 20px;
@@ -95,7 +95,7 @@ const StyledContect = styled.div`
     }
   }
   @media screen and (max-width: 480px) {
-    #Contect {
+    #Contact {
         padding: 20px;
         ul li {
         width: 50%;
@@ -109,4 +109,4 @@ const StyledContect = styled.div`
 `;
 
 
-export default Contect;
+export default Contact;

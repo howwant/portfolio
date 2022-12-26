@@ -29,7 +29,7 @@ const DesginProjects = () => {
     getDesgins();
   }, [])
   // modal
-  const [ url, setUrl ] = useState()
+  const [ url, setUrl ] = useState();
   const [ isShowing, setIsShowing ] = useState(false);
   const body = document.querySelector('body');
 

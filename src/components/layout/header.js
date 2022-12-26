@@ -30,7 +30,7 @@ const Header = () => {
                         <ul id="menu">
                             <li><a href="#AboutMe">About me</a></li>
                             <li><a href="#Projects">Projects</a></li>
-                            <li><a href="#Contect">Contect</a></li>
+                            <li><a href="#Contact">Contact</a></li>
                         </ul>
                     </Pc>
                     <p id="darkMode">
@@ -51,7 +51,7 @@ const Header = () => {
                         <ul className="moblieMenu">
                             <li><a href="#AboutMe">About me</a></li>
                             <li><a href="#Projects">Projects</a></li>
-                            <li><a href="#Contect">Contect</a></li> 
+                            <li><a href="#Contact">Contact</a></li> 
                         </ul>
                     </Mobile>
                 </li>
