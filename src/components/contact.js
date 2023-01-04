@@ -98,12 +98,13 @@ const StyledContact = styled.div`
     #Contact {
         padding: 20px;
         ul li {
-        width: 50%;
-        min-width: auto;
-        span {
-        font-size: 13px;
-    }
-    }
+            width: 42%;
+            min-width: auto;
+            margin: 10px;
+            span {
+                font-size: 13px;
+            }
+        }
     } 
   }
 `;

@@ -111,7 +111,6 @@ const StyledDesgin = styled.div`
         li {
             width: 32%;
             margin-top: 20px;
-            background-color: #ccc;
             position: relative;
             overflow: hidden;
             color: #fff;
@@ -182,6 +181,10 @@ const StyledDesgin = styled.div`
         .desgin li {
             max-height: 130px;
             width: 49%;
+        }
+        .popup div p {
+            font-size: 20px;
+            padding: 7px 0;
         }
     }
     @media screen and (max-width: 375px) {

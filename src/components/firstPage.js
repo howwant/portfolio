@@ -152,20 +152,31 @@ const StyledFirstPage = styled.div`
                 height: 190px;
             }
             P{
-                font-size: 17px;
+                font-size: 15px;
+                line-height: 20px;
                 br {
                     display: block;
                 }
             } 
         } 
     }
+    @media screen and (max-width: 420px) {
+        #first-page::before {
+            height: 172px;
+        }
+    }
     @media screen and (max-width: 375px) {
         #first-page {
             height: 230px;
             &::before{
-                height: 150px;
+                height: 155px;
             }
         } 
+    }
+    @media screen and (max-width: 340px) {
+        #first-page::before {
+            height: 146px;
+        }
     }
 `
 

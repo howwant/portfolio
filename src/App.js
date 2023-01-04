@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Reset } from 'styled-reset';
+import GlobalStyles from './scss/globalStyles';
 import AboutMe from "./components/aboutMe";
 import Contact from "./components/contact";
 import FirstPage from "./components/firstPage";
@@ -11,7 +11,7 @@ function App() {
   return (  
     <React.Fragment>
     <ThemeProvider>
-      <Reset/>
+      <GlobalStyles />
       <Layout>
         <FirstPage/>
         <AboutMe/>

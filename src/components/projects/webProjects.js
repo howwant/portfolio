@@ -73,7 +73,6 @@ const StyledwebProjects = styled.div`
     li {
         width: 32%;
         margin-top: 20px;
-        background-color: #ccc;
         height: 345px;
         position: relative;
         overflow: hidden;
@@ -213,13 +212,14 @@ const StyledwebProjects = styled.div`
             width: 49%;
             h6 {
                 margin-top: 7px;
-                font-size: 20px;
+                font-size: 18px;
             }
             .comment {
                 font-size: 16px;
             }
             &:hover .comment {
-                top: 3px;
+                top: 22px;
+                font-size: 13px;
             }
         }
     }
@@ -227,7 +227,7 @@ const StyledwebProjects = styled.div`
         .front-end li {
             max-height: 109px;
             h6 {
-                margin-top: 28px;
+                margin-top: 47px;
                 font-size: 16px;
             }
             .comment {

@@ -259,7 +259,7 @@ const StyledAboutMe = styled.div`
         justify-content: center;
         li {
             width: 8.3%;
-            min-width: 72px;
+            min-width: 77px;
             text-align: center;
             img {
                 transition: 0.3s;
@@ -322,23 +322,24 @@ const StyledAboutMe = styled.div`
         }
         .intro {
             h4 {
-            font-size: 22px;
+            font-size: 19px;
             }
             p {
-                font-size: 16px;
+                font-size: 14px;
             }
             }
         } 
         .icon-box li {
             width: 50%;
+            padding-bottom: 10px;
             .icon {
             font-size: 28px;
         }
         h5 {
-            font-size: 16px;
+            font-size: 14px;
         }
         p {
-            font-size: 15px;
+            font-size: 13px;
         }
         } 
         .mini-title {
@@ -346,6 +347,17 @@ const StyledAboutMe = styled.div`
         }
         .skills li:first-child {
             padding-bottom: 0;
+        }
+        .web-skills,.desgin-skills  {
+            h5 {
+                font-size: 17px;
+            }
+            li {
+                min-width: 47px;
+                p {
+                    display: none;
+                }
+            }
         }
     }
     @media screen and (max-width: 375px) {
